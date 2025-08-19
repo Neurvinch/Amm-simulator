@@ -16,7 +16,7 @@ function App() {
      
       const logEvent = (msg) => {
          setEvents((prev) => [msg, ...prev]);
-         setHistory( () => [
+         setHistory( (prev) => [
           ...prev,
           {time: Date.now(), eth: reserves.eth, usdc: reserves.usdc} ])
       }
