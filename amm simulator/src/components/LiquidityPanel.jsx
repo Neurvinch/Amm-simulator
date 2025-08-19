@@ -1,6 +1,12 @@
 import React, {useState} from 'react'
 
-const LiquidityPanel = ({}) => {
+const LiquidityPanel = ({
+    reserves,
+    setReserves,
+    lpSupply,
+    setLpSupply,
+    logEvent
+}) => {
     
     const [eth , setEth] = useState("")
 

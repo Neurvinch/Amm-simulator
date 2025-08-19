@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PoolInfo = ({}) => {
+const PoolInfo = ({reserves, lpSupply}) => {
 
     const price = reserves.usdc / reserves.eth
     const  k = reserves.eth * reserves.usdc

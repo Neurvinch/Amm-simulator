@@ -2,7 +2,7 @@ import React from 'react'
 
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
-const ChartPanel = ({}) => {
+const ChartPanel = ({history}) => {
 
     const data = history.map((h)=> ({
         time: new Date(h.time).toLocaleTimeString(),

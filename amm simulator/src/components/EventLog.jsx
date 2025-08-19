@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EventLog = ({}) => {
+const EventLog = ({events}) => {
   return (
      <div className="bg-gray-800 p-4 rounded-xl shadow-lg max-h-60 overflow-y-auto">
       <h2 className="text-xl font-bold mb-2">Event Log</h2>
