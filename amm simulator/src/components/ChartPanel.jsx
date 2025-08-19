@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+
 const ChartPanel = ({}) => {
 
     const data = history.map((h)=> ({
