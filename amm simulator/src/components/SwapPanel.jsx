@@ -41,7 +41,30 @@ const SwapPanel = ({}) => {
     
 
   return (
-    <div>SwapPanel</div>
+    <div className="bg-gray-800 p-4 rounded-xl shadow-lg">
+      <h2 className="text-xl font-bold mb-2">Swap</h2>
+      <select
+        value={direction}
+        onChange={(e) => setDirection(e.target.value)}
+        className="bg-gray-700 p-2 rounded w-full mb-2"
+      >
+        <option value="ethToUsdc">ETH → USDC</option>
+        <option value="usdcToEth">USDC → ETH</option>
+      </select>
+      <input
+        type="number"
+        placeholder="Amount"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+        className="bg-gray-700 p-2 rounded w-full mb-2"
+      />
+      <button
+        onClick={swap}
+        className="bg-blue-500 hover:bg-blue-600 p-2 rounded w-full"
+      >
+        Swap
+      </button>
+    </div>
   )
 
 }
