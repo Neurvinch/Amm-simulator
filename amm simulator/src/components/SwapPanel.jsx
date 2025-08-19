@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
  
-const SwapPanel = ({}) => {
+const SwapPanel = ({ reserves, setReserves, logEvent}) => {
     const [amount , setAmount] = useState("")
     const[direction, setDirection] = useState("ethToUsdc")
     const fee = 0.03;
 
     const swap =() => {
-        let {eth , usdc} = ResizeObserverSize;
+        let {eth , usdc} = reserves;
 
         const input = parseFloat(amount);
 
