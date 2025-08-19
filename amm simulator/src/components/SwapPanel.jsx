@@ -19,17 +19,31 @@ const SwapPanel = ({}) => {
             
            setReserves({eth: eth + input , usdc: usdc - input});
 
-           logEvent(`Swapped ${input} USDC for ${output.toFixed(4)} ETH  `)
-        }  
+           logEvent(`Swapped ${input} ETH for ${output.toFixed(4)} USDC  `)
+        }   else {
 
+            const inputWithFee = input * (1 - fee);
 
+            const output = (eth * inputWithFee) / (
+                usdc + inputWithFee
+            ) 
 
+            setReserves({eth: eth - output, usdc: usdc + input})
+       
 
+        logEvent(`Swapped ${input} USDC for ${output.toFixed(4)} ETH`)
+     }
+
+    setAmount("")
     }
+
+
+    
 
   return (
     <div>SwapPanel</div>
   )
+
 }
 
 export default SwapPanel
